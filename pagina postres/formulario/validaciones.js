@@ -1,52 +1,56 @@
 function validarFormulario() {
-    // Obtener referencias a los elementos del formulario
     const nombreInput = document.getElementById('nombre');
-    const apellidoInput = document.getElementById('apellido');
     const correoInput = document.getElementById('correo');
-    const contraseñaInput = document.getElementById('contraseña');
+    const mensajeInput = document.getElementById('mensaje');
+    const tipoConsultaInput = document.getElementById('tipoConsulta');
 
-    // Obtener valores de los campos
-    const nombre = nombreInput.value.trim();
-    const apellido = apellidoInput.value.trim();
-    const correo = correoInput.value.trim();
-    const contraseña = contraseñaInput.value.trim();
+    limpiarMensajes();
 
-    // Limpiar mensajes de error
-    document.getElementById('errorNombre').innerText = '';
-    document.getElementById('errorApellido').innerText = '';
-    document.getElementById('errorCorreo').innerText = '';
-    document.getElementById('errorContraseña').innerText = '';
-    document.getElementById('mensajeExito').innerText = '';
-
-    // Validar nombre
-    if (nombre.length === 0) {
-        document.getElementById('errorNombre').innerText = 'Este campo es obligatorio';
-    }
-
-    // Validar apellido
-    if (apellido.length === 0) {
-        document.getElementById('errorApellido').innerText = 'Este campo es obligatorio';
-    }
-
-    // Validar correo
-    const correoRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!correoRegExp.test(correo)) {
-        document.getElementById('errorCorreo').innerText = 'Ingrese un correo válido';
-    }
-
-    // Validar contraseña
-    if (contraseña.length < 8) {
-        document.getElementById('errorContraseña').innerText = 'La contraseña debe tener al menos 8 caracteres';
-    }
+    validarCampo(nombreInput, 'errorNombre', 'Nombre es obligatorio');
+    validarCampo(nombreInput, 'errorApellido', 'Apellido es obligatorio');
+    validarCampo(correoInput, 'errorCorreo', 'Correo electrónico no válido', /^\S+@\S+\.\S+$/);
+    validarCampo(mensajeInput, 'errorMensaje', 'Mensaje es obligatorio');
+    validarCampo(tipoConsultaInput, 'errorTipoConsulta', 'Tipo de Consulta es obligatorio');
 
     // Si no hay mensajes de error, mostrar mensaje de éxito
-    if (
-        document.getElementById('errorNombre').innerText === '' &&
-        document.getElementById('errorApellido').innerText === '' &&
-        document.getElementById('errorCorreo').innerText === '' &&
-        document.getElementById('errorContraseña').innerText === ''
-    ) {
+    if (document.querySelectorAll('.falla').length === 0) {
         document.getElementById('mensajeExito').innerText = '¡Formulario enviado con éxito!';
     }
 }
 
+function validarCampo(input, idError, mensajeError, regex) {
+    const valor = input.value.trim();
+    const formControl = input.parentElement;
+    const aviso = formControl.querySelector(`#${idError}`);
+
+    if (!valor && !regex) {
+        mostrarError(formControl, aviso, mensajeError);
+    } else if (regex && !regex.test(valor)) {
+        mostrarError(formControl, aviso, mensajeError);
+    } else {
+        mostrarExito(formControl);
+    }
+}
+
+function mostrarError(formControl, aviso, mensaje) {
+    aviso.textContent = mensaje;
+    formControl.className = 'form-control falla';
+}
+
+function mostrarExito(formControl) {
+    formControl.className = 'form-control ok';
+}
+
+function limpiarMensajes() {
+    document.getElementById('errorNombre').innerText = '';
+    document.getElementById('errorApellido').innerText = '';
+    document.getElementById('errorCorreo').innerText = '';
+    document.getElementById('errorMensaje').innerText = '';
+    document.getElementById('errorTipoConsulta').innerText = '';
+    document.getElementById('mensajeExito').innerText = '';
+
+    const formControls = document.querySelectorAll('.form-control');
+    formControls.forEach((formControl) => {
+        formControl.className = 'form-control';
+    });
+}

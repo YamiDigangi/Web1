@@ -4,45 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Formulario</title>
+    <title>Tu Postre Sano - Contacto</title>
     <link rel="stylesheet" href="forms.css">
-    <script src="validaciones.js"></script>
+    <script src="validaciones.js" defer></script>
 </head>
 <body>
     <section class="forms"> 
-        <form id="formulario" action="" method="">
-            <h4>Formulario Registro</h4>
+        <form id="formulario" action="#" method="post">
+            <h4>Formulario de Contacto</h4>
 
             <div class="form-control">      
-                <input class="controles" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                <input class="controles" type="text" name="nombre" id="nombre" placeholder="Nombre">
                 <p id="errorNombre"></p>
-            </div>          
-           
+            </div>      
             
-            <div class="form-control"> 
-                <input class="controles" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
-                <p id="errorApellido"></p>
-            </div>          
+            <div class="form-control">      
+                <input class="controles" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                <p id="errorapellido"></p>
+            </div>  
            
-            
             <div class="form-control"> 
-                <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+                <input class="controles" type="email" name="correo" id="correo" placeholder="Correo electrónico">
                 <p id="errorCorreo"></p>
-            </div>                        
-            
+            </div>
 
             <div class="form-control"> 
-                <input class="controles" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
-                <p id="errorContraseña"></p>
+                <textarea class="controles" name="mensaje" id="mensaje" placeholder="Dejanos tu consulta"></textarea>
+                <p id="errorMensaje"></p>
+            </div>
+
+            <div class="form-control">
+                <label for="tipoConsulta">Tipo de Consulta:</label>
+                <select id="tipoConsulta" name="tipoConsulta">
+                    <option value="general">Consulta General</option>
+                    <option value="pedido">Pedido Especial</option>
+                    <option value="sugerencia">Sugerencia</option>
+                </select>
             </div>
 
             <button class="boton" onclick="validarFormulario()">Enviar</button>
-           
-
-
+            <p id="mensajeExito"></p>
         </form>
     </section>
-
-
 </body>
 </html>
