@@ -1,5 +1,6 @@
 function validarFormulario() {
     const nombreInput = document.getElementById('nombre');
+    const apellidoInput = document.getElementById('apellido');
     const correoInput = document.getElementById('correo');
     const mensajeInput = document.getElementById('mensaje');
     const tipoConsultaInput = document.getElementById('tipoConsulta');
@@ -7,7 +8,7 @@ function validarFormulario() {
     limpiarMensajes();
 
     validarCampo(nombreInput, 'errorNombre', 'Nombre es obligatorio');
-    validarCampo(nombreInput, 'errorApellido', 'Apellido es obligatorio');
+    validarCampo(apellidoInput, 'errorApellido', 'Apellido es obligatorio');
     validarCampo(correoInput, 'errorCorreo', 'Correo electrónico no válido', /^\S+@\S+\.\S+$/);
     validarCampo(mensajeInput, 'errorMensaje', 'Mensaje es obligatorio');
     validarCampo(tipoConsultaInput, 'errorTipoConsulta', 'Tipo de Consulta es obligatorio');
