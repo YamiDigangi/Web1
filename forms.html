@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Postre Sano - Contacto</title>
-    <link rel="stylesheet" href="forms.css">
-    <script src="validaciones.js" defer></script>
+    <link rel="stylesheet" href="./css/postre1.css">
+    <script src="./js/validaciones.js" defer></script>
 </head>
 <body>
     <section class="forms"> 
-        <form id="formulario" action="#" method="post">
+        <form id="formulario" onsubmit="return validarFormulario()" method="post">
             <h4>Formulario de Contacto</h4>
 
             <div class="form-control">      
@@ -42,7 +42,7 @@
                 </select>
             </div>
 
-            <button class="boton" onclick="validarFormulario()">Enviar</button>
+            <button class="boton" >Enviar</button>
             <p id="mensajeExito"></p>
         </form>
     </section>

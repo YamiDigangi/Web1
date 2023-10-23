@@ -1,5 +1,18 @@
+:root {
+  --rose-50: #fdf2f7;
+  --rose-100: #fce7f1;
+  --rose-200: #fbcfe4;
+  --rose-300: #f9a8cc;
+  --rose-400: #f571a9;
+  --rose-500: #eb337c;
+  --rose-600: #dc2665;
+  --rose-700: #bf174d;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -9,6 +22,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  background: var(--rose-50); 
 }
 
 h1 {
@@ -29,7 +43,7 @@ p {
 }
 
 header {
-  background-color: #f3f3f3; /* Rosa pálido */
+  background-color: var(--rose-50);
 }
 
 header .logo {
@@ -37,7 +51,7 @@ header .logo {
   padding: 25px 30px;
   font-weight: bold;
   font-size: 2em;
-  color: #ff6666; /* Rosa fuerte */
+  color: var(--rose-700);
 }
 
 header .container {
@@ -61,12 +75,12 @@ ul li {
 
 header a {
   padding: 6px 15px;
-  color: #333; /* Negro */
+  color: #333;
   text-decoration: none;
 }
 
 header a:hover {
-  color: #ff6347; /* Tomate */
+  color: var(--rose-600);
 }
 
 #banner {
@@ -75,13 +89,9 @@ header a:hover {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  color: #f0f8ff; /* Azul celeste */
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-  ),
-  url('img/play.jpg');
+  color: var(--rose-700);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('') repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -92,17 +102,17 @@ header a:hover {
   font-size: 2.5em;
 }
 
-#destacados {
+.section {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #ffdab9; /* Melocotón claro */
-  text-shadow: 2px 2px 6px #000000; /* Sombra de texto */
+  background-color: var(--rose-300);
+  text-shadow: 2px 2px 6px #000000;
 }
 
 .toque {
-  color: #ff6347; /* Tomate */
+  color: var(--rose-600);
 }
 
 #novedades p {
@@ -137,15 +147,6 @@ header a:hover {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
 }
 
-#lanzamientos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #ffdab9; /* Melocotón claro */
-  text-shadow: 2px 2px 6px #000000; /* Sombra de texto */
-}
-
 footer {
   display: flex;
   align-items: center;
@@ -155,4 +156,76 @@ footer {
 
 .conteiner p {
   font-family: 'Courier New', Courier, monospace;
+}
+
+.forms {
+  width: 400px;
+  padding: 30px;
+  background: var(--rose-300);
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: #333;
+  box-shadow: 20px 15px 25px #ccc;
+}
+
+.forms h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controles {
+  width: 100%;
+  padding: 10px;
+  background: var(--rose-200);
+  border-radius: 4px;
+  margin-bottom: 14px;
+  border: 1px solid #999;
+  font-family: 'calibri';
+  font-size: 16px;
+  color: #333;
+}
+
+.forms p {
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  color: var(--rose-600);
+}
+
+.form-control.ok input {
+  border: 2px solid;
+  border-color: #666;
+}
+
+.form-control.ok p {
+  visibility: hidden;
+}
+
+.form-control.falla input {
+  border: 2px solid;
+  border-color: var(--rose-600);
+}
+
+.boton {
+  width: 100%;
+  background: #666;
+  padding: 12px;
+  color: #fff;
+  margin: 16px 0;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.form-control p {
+  font-size: small;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-control.falla p {
+  visibility: visible;
 }
