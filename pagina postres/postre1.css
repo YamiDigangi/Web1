@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 2.0em;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  background-color: #f3f3f3; /* Rosa pálido */
+}
+
+header .logo {
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  font-size: 2em;
+  color: #ff6666; /* Rosa fuerte */
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: bold;
+}
+
+header nav {
+  padding: 25px 30px;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+header a {
+  padding: 6px 15px;
+  color: #333; /* Negro */
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #ff6347; /* Tomate */
+}
+
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: #f0f8ff; /* Azul celeste */
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+  ),
+  url('img/play.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+#banner p {
+  font-size: 2.5em;
+}
+
+#destacados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffdab9; /* Melocotón claro */
+  text-shadow: 2px 2px 6px #000000; /* Sombra de texto */
+}
+
+.toque {
+  color: #ff6347; /* Tomate */
+}
+
+#novedades p {
+  font-size: 1.5em;
+}
+
+#novedades .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container .carta img {
+  width: 250px;
+  height: 190px;
+}
+
+.container .carta {
+  width: 330px;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.container .carta:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+}
+
+#lanzamientos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffdab9; /* Melocotón claro */
+  text-shadow: 2px 2px 6px #000000; /* Sombra de texto */
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.conteiner p {
+  font-family: 'Courier New', Courier, monospace;
+}

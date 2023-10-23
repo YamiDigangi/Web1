@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5; /* Fondo gris claro */
+}
+
+.forms {
+    width: 400px;
+    padding: 30px;
+    background: #fbe3e3; /* Rosa pastel */
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: #333; /* Gris oscuro */
+    box-shadow: 20px 15px 25px #ccc; /* Gris claro para sombra */
+}
+
+.forms h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controles {
+    width: 100%;
+    padding: 10px;
+    background: #f6c8c7; /* Rosa claro pastel */
+    border-radius: 4px;
+    margin-bottom: 14px;
+    border: 1px solid #999; /* Gris medio para contraste */
+    font-family: 'calibri';
+    font-size: 16px;
+    color: #333; /* Gris oscuro */
+}
+
+.forms p {
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fbe3e3;
+    
+}
+
+.form-control.ok input {
+    border: 2px solid;
+    border-color: #666; /* Gris */
+}
+
+.form-control.ok p {
+    visibility: hidden;
+}
+
+.form-control.falla input {
+    border: 2px solid;
+    border-color: #fbe3e3; 
+}
+
+.boton {
+    width: 100%;
+    background: #666; /* Gris */
+    padding: 12px;
+    color: #fff;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form-control p {
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-control.falla p {
+    visibility: visible;
+}
