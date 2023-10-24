@@ -46,6 +46,8 @@ header {
 }
 
 header .logo {
+  width: 250px;
+  height: 190px;
   margin: 0;
   padding: 25px 30px;
   font-weight: bold;

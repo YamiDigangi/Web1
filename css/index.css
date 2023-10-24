@@ -54,6 +54,11 @@ header .logo {
   color: var(--rose-700);
 }
 
+header .logo img {
+  width: 150px;
+  height: 150px;
+}
+
 header .container {
   display: flex;
   align-items: center;
@@ -83,22 +88,20 @@ header a:hover {
   color: var(--rose-600);
 }
 
-#banner {
+#banners {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
   color: var(--rose-700);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url('') repeat;
-  background-repeat: no-repeat;
+  height: 250px;
+  background-color: #f9a8cc;
   background-size: cover;
   background-position: center;
-  height: 400px;
 }
 
-#banner p {
+#banners p {
   font-size: 2.5em;
 }
 
@@ -148,10 +151,23 @@ header a:hover {
 }
 
 footer {
+  font-size: 0.5em;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.social-media {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.social-media-icon {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .conteiner p {
