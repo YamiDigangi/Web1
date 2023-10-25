@@ -1,30 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // Accede al formulario
-  const form = document.getElementById('registroForm');
+let Slider = document.querySelector(".slider");
+let IconoDerecho = document.querySelector(".icono-derecho");
+let IconoIzuierdo = document.querySelector(".icono-izquierdo");
+let Imagenes = document.querySelectorAll(".img-slider").length;
+let Contador = 0;
 
-  // Agrega un evento de escucha para el envío del formulario
-  form.addEventListener('submit', function (event) {
-      // Detiene el envío del formulario para manejar la validación manualmente
-      event.preventDefault();
+function MoverSlider()
+  {
+    if(Contador > Imagenes - 1)
+        {
+          Contador = 0;
+        } else if(Contador < 0)
+                   {
+                    Contador =  Imagenes - 1;
+                   }
+    Slider.style.transition = "all 1s ease"
+    Slider.style.marginLeft = `-${100 * Contador}%`;
+  }
 
-      // Valida el nombre
-      const nombre = document.getElementById('nombre');
-      if (nombre.value.trim() === '') {
-          alert('Por favor, ingrese su nombre.');
-          nombre.focus();
-          return;
-      }
+function MoverDerecha()
+  {
+     Contador++;
+     MoverSlider();
+  }
+IconoDerecho.addEventListener("click", MoverDerecha);
 
-      // Valida el correo electrónico
-      const email = document.getElementById('email');
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email.value)) {
-          alert('Por favor, ingrese un correo electrónico válido.');
-          email.focus();
-          return;
-      }
-
-      // Si todas las validaciones pasan, puedes enviar el formulario aquí
-      alert('¡Formulario enviado con éxito!');
-  });
-});
+function MoverIzquierda()
+  {
+    Contador--;
+    MoverSlider();
+  }
+IconoIzuierdo.addEventListener("click", MoverIzquierda)
