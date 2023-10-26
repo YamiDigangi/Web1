@@ -96,8 +96,8 @@ header a:hover {
   flex-direction: column;
   color: var(--rose-700);
   height: 250px;
-  background-color: #f9a8cc;
-  background-size: cover;
+  background-image: url('../img/imagen-fondo.jpeg');
+  background-size:contain;
   background-position: center;
 }
 
@@ -151,11 +151,57 @@ header a:hover {
 }
 
 footer {
-  font-size: 0.5em;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--rose-100); /* Utiliza el color de fondo que prefieras */
+}
+
+footer article {
+  margin-bottom: 20px;
+}
+
+
+footer p {
+  font-size: 1em;
+}
+
+footer a {
+  color: var(--rose-700);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .conteiner {
+  margin-bottom: 10px;
+}
+
+footer .conteiner p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer .social-media {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+}
+
+footer .social-media-icon {
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--rose-600);
+}
+
+footer .social-media-icon:hover {
+  color: var(--rose-700);
 }
 
 .social-media {

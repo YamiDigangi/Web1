@@ -1,25 +1,17 @@
-window.addEventListener('load', ()=> {
+//window.addEventListener('load', ()=> {
     const formulario = document.querySelector('#formulario');
     const nombre = document.getElementById('nombre');
     const validacion = new RegExp('^[A-Z]+$', 'i');
     const apellido = document.getElementById('apellido');
     const email = document.getElementById('correo');
-    const pass = document.getElementById('contraseña');
-
-    formulario.addEventListener('submit', (d)=> {
-        d.preventDefault();
-        validarCampos();     
-    })
     
-    //valindando campo Usuario
-
+ 
     function validarCampos() {
         // Capturamos los valores que ingresa el usuario
         const nombreValor = nombre.value.trim()  //eliminamos los espacios en blanco
         const apellidoValor = apellido.value.trim()
         const emailValor = email.value.trim()
-        const passValor = pass.value.trim()
-
+      
         if(nombreValor === '') {           
             validarFalla(nombre, 'Campo Vacio')
             alert("Ingres un nombre");
@@ -57,22 +49,6 @@ window.addEventListener('load', ()=> {
             validarOk(email);
         }
 
-    //validando campo password
-        const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/
-        if(passValor === '') {
-            validarFalla(pass, 'Campo Vacio');
-            alert("Ingres un Password");
-            
-        }else if (passValor.length < 8) {
-            validarFalla(pass, 'Debe tener 8 caracteres como minimo');
-            
-        }else if(!passValor.match(er)) {
-            validarFalla(pass, 'Debe tener una Mayu, una minu y un numero');
-            
-        }else{
-            validarOk(pass);
-            alert("Datos Cargados Exitosamnte!")
-        }
 
     }
 
@@ -93,4 +69,4 @@ window.addEventListener('load', ()=> {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
     }
 
-})
+ //})
