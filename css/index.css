@@ -1,4 +1,4 @@
-:root {
+ :root {
   --rose-50: #fdf2f7;
   --rose-100: #fce7f1;
   --rose-200: #fbcfe4;
@@ -290,4 +290,30 @@ footer .social-media-icon:hover {
 
 .form-control.falla p {
   visibility: visible;
+}
+
+
+#mensajeExitoso {
+  color: var(--rose-600);
+  font-size: 1em;
+  margin-bottom: 50px; 
+  max-height: 200px; 
+  overflow-y:visible; 
+}
+
+#ltaErrores {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#ltaErrores li {
+  color: var(--rose-600);
+  font-size: 1em;
+  width: 200px; 
+  box-sizing: border-box; 
+  list-style: disc inside; 
+  margin-left: 10px;
 }

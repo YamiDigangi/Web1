@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Postre Saludable - Contacto</title>
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/froms.js" defer></script>
+    <script src="./js/forms.js" defer></script>
 </head>
 <body>
     <section class="forms"> 
@@ -36,15 +36,23 @@
             <div class="form-control">
                 <label for="tipoConsulta">Tipo de Consulta:</label>
                 <select id="tipoConsulta" name="tipoConsulta">
+                    <option disabled selected value="">Seleccione una opcion</option>
                     <option value="general">Consulta General</option>
                     <option value="pedido">Pedido Especial</option>
                     <option value="sugerencia">Sugerencia</option>
                 </select>
             </div>
-
-            <button class="boton" >Enviar</button>
-            <p id="mensajeExito"></p>
+           
+           <button class="boton" type="submit" id="btnEnviar">Enviar</button>
+           
+          
+          <div id="mensajes">
+            <p id="mensajeExitoso"></p>
+            <ul id="ltaErrores"></ul>
+        </div>
         </form>
+        
+       
     </section>
     <footer>
         <article>
