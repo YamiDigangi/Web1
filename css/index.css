@@ -95,9 +95,9 @@ header a:hover {
   text-align: center;
   flex-direction: column;
   color: var(--rose-700);
-  height: 250px;
-  background-image: url('../img/imagen-fondo.jpeg');
-  background-size:contain;
+  height: 400px;
+  background-image: url('../img/Diseñobanner.png');
+  background-size:cover;
   background-position: center;
 }
 
@@ -157,7 +157,7 @@ footer {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background-color: var(--rose-100); /* Utiliza el color de fondo que prefieras */
+  background-color: var(--rose-100); 
 }
 
 footer article {
