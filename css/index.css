@@ -38,7 +38,7 @@ p {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -128,10 +128,15 @@ header a:hover {
   justify-content: center;
   text-align: center;
 }
+#novedadesDos p {
+  font-size: 1.5em;
+}
 
-.container .carta img {
-  width: 250px;
-  height: 190px;
+#novedadesDos .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .container .carta {
@@ -148,6 +153,72 @@ header a:hover {
 .container .carta:hover {
   transform: translateY(-15px);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .carta img {
+  width: 250px;
+  height: 190px;
+}
+
+.containerDos {
+  position: relative;
+  max-width: 330px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slidesDos {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+#slidesDos {
+  display: flex; 
+  width: calc(330px * 5);
+}
+
+.cartaDos img {
+  width: 250px;
+  height: 190px;
+}
+
+.cartaDos {
+  width: 330px;
+  height: 400px;
+  margin-right: 20px;
+}
+
+/* Agrega estos estilos para los botones izquierdo y derecho */
+.buttonizquierdo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: var(--rose-500);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buttonderecho {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: var(--rose-500);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buttonizquierdo:hover,
+.buttonderecho:hover {
+  background-color: var(--rose-700);
 }
 
 footer {
