@@ -31,6 +31,7 @@ h1 {
 
 h2 {
   font-size: 3em;
+  text-align: center;
 }
 
 p {
@@ -162,13 +163,15 @@ header a:hover {
 
 .containerDos {
   position: relative;
-  max-width: 330px;
+  max-width: 312px;
   margin: auto;
   overflow: hidden;
 }
 
 .slidesDos {
   display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   width: 100%;
 }
@@ -185,15 +188,16 @@ header a:hover {
 
 .cartaDos {
   width: 330px;
-  height: 400px;
+  height: 450px;
+  text-align: center;
   margin-right: 20px;
 }
 
-/* Agrega estos estilos para los botones izquierdo y derecho */
+
 .buttonizquierdo {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 0%;
   transform: translateY(-50%);
   background-color: var(--rose-500);
   color: #fff;
@@ -206,7 +210,7 @@ header a:hover {
 .buttonderecho {
   position: absolute;
   top: 50%;
-  right: 0;
+  right:0%;
   transform: translateY(-50%);
   background-color: var(--rose-500);
   color: #fff;
